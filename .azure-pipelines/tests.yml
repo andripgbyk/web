@@ -1,0 +1,15 @@
+# Tests
+
+resources:
+  repositories:
+  - repository: azure-pipelines
+    name: botika-wabis/azure-pipelines
+    type: git
+    ref: main
+
+trigger:
+  - main
+
+extends:
+  template: javascript/tests.yml@azure-pipelines
+

@@ -1,0 +1,16 @@
+# Build
+
+resources:
+  repositories:
+  - repository: azure-pipelines
+    name: botika-wabis/azure-pipelines
+    type: git
+    ref: main
+
+trigger:
+  tags:
+    include:
+    - v*
+
+extends:
+  template: javascript/build.yml@azure-pipelines
